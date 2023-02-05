@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
   repo: clairemanthey/design_blog
+  accept_roles:
+    -admin
+    -editor
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
