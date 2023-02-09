@@ -17,37 +17,16 @@ export const IndexPageTemplate = ({
 }) => {
 
   return (
-    <div>
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content">
-                  </div>
-                  <div className="columns">
-                  </div>
-                  <div className="columns">
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <main className="main">
+          <section className="main-section">
+            <h1>Adventures in Web Design</h1>
+            <p className="para blog-para para-home">Welcome to my blog. Follow me along my journey to making the web a more beautiful place.</p>
+            <p className="para blog-para para-home">Starting from the basics with HTML and working up to add functionality with JS and making it look
+            good with CSS.</p>
+            <Link to="/blog">Go to Blog</Link>
+          </section>
+
+    </main>
   );
 };
 
