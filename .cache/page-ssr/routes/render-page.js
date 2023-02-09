@@ -2048,7 +2048,6 @@ exports.components = {
   "component---src-templates-about-page-js": () => __webpack_require__.e(/*! import() | component---src-templates-about-page-js */ "component---src-templates-about-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/about-page.js?export=default */ "./src/templates/about-page.js?export=default")),
   "component---src-templates-blog-post-js": () => __webpack_require__.e(/*! import() | component---src-templates-blog-post-js */ "component---src-templates-blog-post-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/blog-post.js?export=default */ "./src/templates/blog-post.js?export=default")),
   "component---src-templates-index-page-js": () => __webpack_require__.e(/*! import() | component---src-templates-index-page-js */ "component---src-templates-index-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/index-page.js?export=default */ "./src/templates/index-page.js?export=default")),
-  "component---src-templates-product-page-js": () => __webpack_require__.e(/*! import() | component---src-templates-product-page-js */ "component---src-templates-product-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/product-page.js?export=default */ "./src/templates/product-page.js?export=default")),
   "component---src-templates-tags-js": () => __webpack_require__.e(/*! import() | component---src-templates-tags-js */ "component---src-templates-tags-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/tags.js?export=default */ "./src/templates/tags.js?export=default"))
 };
 exports.head = {
@@ -2060,7 +2059,6 @@ exports.head = {
   "component---src-templates-about-page-js": () => __webpack_require__.e(/*! import() | component---src-templates-about-page-jshead */ "component---src-templates-about-page-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/about-page.js?export=head */ "./src/templates/about-page.js?export=head")),
   "component---src-templates-blog-post-js": () => __webpack_require__.e(/*! import() | component---src-templates-blog-post-jshead */ "component---src-templates-blog-post-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/blog-post.js?export=head */ "./src/templates/blog-post.js?export=head")),
   "component---src-templates-index-page-js": () => __webpack_require__.e(/*! import() | component---src-templates-index-page-jshead */ "component---src-templates-index-page-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/index-page.js?export=head */ "./src/templates/index-page.js?export=head")),
-  "component---src-templates-product-page-js": () => __webpack_require__.e(/*! import() | component---src-templates-product-page-jshead */ "component---src-templates-product-page-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/product-page.js?export=head */ "./src/templates/product-page.js?export=head")),
   "component---src-templates-tags-js": () => __webpack_require__.e(/*! import() | component---src-templates-tags-jshead */ "component---src-templates-tags-jshead").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/tags.js?export=head */ "./src/templates/tags.js?export=head"))
 };
 
@@ -9009,83 +9007,6 @@ module.exports = require("/Users/clairemanthey/design_blog/node_modules/react-do
 
 "use strict";
 module.exports = require("/Users/clairemanthey/design_blog/node_modules/react/index.js");
-
-/***/ }),
-
-/***/ "crypto":
-/*!*************************!*\
-  !*** external "crypto" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("crypto");
-
-/***/ }),
-
-/***/ "http":
-/*!***********************!*\
-  !*** external "http" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("http");
-
-/***/ }),
-
-/***/ "https":
-/*!************************!*\
-  !*** external "https" ***!
-  \************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("https");
-
-/***/ }),
-
-/***/ "punycode":
-/*!***************************!*\
-  !*** external "punycode" ***!
-  \***************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("punycode");
-
-/***/ }),
-
-/***/ "stream":
-/*!*************************!*\
-  !*** external "stream" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("stream");
-
-/***/ }),
-
-/***/ "url":
-/*!**********************!*\
-  !*** external "url" ***!
-  \**********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("url");
-
-/***/ }),
-
-/***/ "zlib":
-/*!***********************!*\
-  !*** external "zlib" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("zlib");
 
 /***/ }),
 

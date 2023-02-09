@@ -11318,1029 +11318,6 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-plugin-image/dist/index.browser-dc34ce8e.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-image/dist/index.browser-dc34ce8e.js ***!
-  \*************************************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": function() { return /* binding */ ae; },
-/* harmony export */   "L": function() { return /* binding */ A; },
-/* harmony export */   "M": function() { return /* binding */ U; },
-/* harmony export */   "P": function() { return /* binding */ F; },
-/* harmony export */   "S": function() { return /* binding */ oe; },
-/* harmony export */   "_": function() { return /* binding */ c; },
-/* harmony export */   "a": function() { return /* binding */ u; },
-/* harmony export */   "b": function() { return /* binding */ j; },
-/* harmony export */   "c": function() { return /* binding */ W; },
-/* harmony export */   "d": function() { return /* binding */ T; },
-/* harmony export */   "e": function() { return /* binding */ R; },
-/* harmony export */   "f": function() { return /* binding */ _; },
-/* harmony export */   "g": function() { return /* binding */ O; },
-/* harmony export */   "h": function() { return /* binding */ N; },
-/* harmony export */   "i": function() { return /* binding */ M; },
-/* harmony export */   "j": function() { return /* binding */ E; },
-/* harmony export */   "w": function() { return /* binding */ C; }
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var camelcase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! camelcase */ "./node_modules/gatsby-plugin-image/node_modules/camelcase/index.js");
-/* harmony import */ var camelcase__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(camelcase__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/gatsby/dist/utils/fast-refresh-module.js */ "./node_modules/gatsby/dist/utils/fast-refresh-module.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-
-
-
-
-
-
-function u() {
-  return u = Object.assign ? Object.assign.bind() : function (e) {
-    for (var t = 1; t < arguments.length; t++) {
-      var a = arguments[t];
-
-      for (var i in a) {
-        Object.prototype.hasOwnProperty.call(a, i) && (e[i] = a[i]);
-      }
-    }
-
-    return e;
-  }, u.apply(this, arguments);
-}
-
-function c(e, t) {
-  if (null == e) return {};
-  var a,
-      i,
-      r = {},
-      n = Object.keys(e);
-
-  for (i = 0; i < n.length; i++) {
-    t.indexOf(a = n[i]) >= 0 || (r[a] = e[a]);
-  }
-
-  return r;
-}
-
-var g = [.25, .5, 1, 2],
-    p = [750, 1080, 1366, 1920],
-    m = [320, 654, 768, 1024, 1366, 1600, 1920, 2048, 2560, 3440, 3840, 4096],
-    f = function f(e) {
-  return console.warn(e);
-},
-    w = function w(e, t) {
-  return e - t;
-},
-    y = function y(e) {
-  return e.map(function (e) {
-    return e.src + " " + e.width + "w";
-  }).join(",\n");
-};
-
-function b(e) {
-  var t = e.lastIndexOf(".");
-
-  if (-1 !== t) {
-    var _a = e.slice(t + 1);
-
-    if ("jpeg" === _a) return "jpg";
-    if (3 === _a.length || 4 === _a.length) return _a;
-  }
-}
-
-function v(e) {
-  var _e$layout = e.layout,
-      t = _e$layout === void 0 ? "constrained" : _e$layout,
-      a = e.width,
-      i = e.height,
-      r = e.sourceMetadata,
-      n = e.breakpoints,
-      s = e.aspectRatio,
-      _e$formats = e.formats,
-      o = _e$formats === void 0 ? ["auto", "webp"] : _e$formats;
-  return o = o.map(function (e) {
-    return e.toLowerCase();
-  }), t = camelcase__WEBPACK_IMPORTED_MODULE_2___default()(t), a && i ? u({}, e, {
-    formats: o,
-    layout: t,
-    aspectRatio: a / i
-  }) : (r.width && r.height && !s && (s = r.width / r.height), "fullWidth" === t ? (a = a || r.width || n[n.length - 1], i = i || Math.round(a / (s || 1.3333333333333333))) : (a || (a = i && s ? i * s : r.width ? r.width : i ? Math.round(i / 1.3333333333333333) : 800), s && !i ? i = Math.round(a / s) : s || (s = a / i)), u({}, e, {
-    width: a,
-    height: i,
-    aspectRatio: s,
-    layout: t,
-    formats: o
-  }));
-}
-
-function E(e, t) {
-  if (t === void 0) {
-    t = 20;
-  }
-
-  var a;
-  e = v(e);
-  var _e = e,
-      i = _e.generateImageSource,
-      r = _e.filename,
-      n = _e.aspectRatio;
-  return null == (a = i(r, t, Math.round(t / n), e.sourceMetadata.format || "jpg", e.fit, e.options)) ? void 0 : a.src;
-}
-
-_c = E;
-
-function M(e) {
-  e = v(e);
-  var _e2 = e,
-      t = _e2.pluginName,
-      a = _e2.sourceMetadata,
-      i = _e2.generateImageSource,
-      r = _e2.layout,
-      n = _e2.fit,
-      s = _e2.options,
-      o = _e2.width,
-      l = _e2.height,
-      d = _e2.filename,
-      _e2$reporter = _e2.reporter,
-      h = _e2$reporter === void 0 ? {
-    warn: f
-  } : _e2$reporter,
-      c = _e2.backgroundColor,
-      m = _e2.placeholderURL;
-  if (t || h.warn('[gatsby-plugin-image] "generateImageData" was not passed a plugin name'), "function" != typeof i) throw new Error("generateImageSource must be a function");
-  var w;
-  a && (a.width || a.height) ? a.format || (a.format = b(d)) : a = {
-    width: o,
-    height: l,
-    format: (null == (w = a) ? void 0 : w.format) || b(d) || "auto"
-  };
-  var E = new Set(e.formats);
-  (0 === E.size || E.has("auto") || E.has("")) && (E.delete("auto"), E.delete(""), E.add(a.format)), E.has("jpg") && E.has("png") && (h.warn("[" + t + "] Specifying both 'jpg' and 'png' formats is not supported. Using 'auto' instead"), E.delete("jpg" === a.format ? "png" : "jpg"));
-
-  var M = function (e) {
-    var t = e.width,
-        a = e.height,
-        i = e.filename,
-        _e$layout2 = e.layout,
-        r = _e$layout2 === void 0 ? "constrained" : _e$layout2,
-        n = e.sourceMetadata,
-        _e$reporter = e.reporter,
-        s = _e$reporter === void 0 ? {
-      warn: f
-    } : _e$reporter,
-        _e$breakpoints = e.breakpoints,
-        o = _e$breakpoints === void 0 ? p : _e$breakpoints,
-        l = Object.entries({
-      width: t,
-      height: a
-    }).filter(function (_ref) {
-      var e = _ref[0],
-          t = _ref[1];
-      return "number" == typeof t && t < 1;
-    });
-    if (l.length) throw new Error("Specified dimensions for images must be positive numbers (> 0). Problem dimensions you have are " + l.map(function (e) {
-      return e.join(": ");
-    }).join(", "));
-    return "fixed" === r ? function (_ref2) {
-      var e = _ref2.filename,
-          t = _ref2.sourceMetadata,
-          a = _ref2.width,
-          i = _ref2.height,
-          _ref2$fit = _ref2.fit,
-          r = _ref2$fit === void 0 ? "cover" : _ref2$fit,
-          _ref2$outputPixelDens = _ref2.outputPixelDensities,
-          n = _ref2$outputPixelDens === void 0 ? g : _ref2$outputPixelDens,
-          _ref2$reporter = _ref2.reporter,
-          s = _ref2$reporter === void 0 ? {
-        warn: f
-      } : _ref2$reporter;
-      var o = t.width / t.height;
-      var l = k(n);
-
-      if (a && i) {
-        var _e3 = $(t, {
-          width: a,
-          height: i,
-          fit: r
-        });
-
-        a = _e3.width, i = _e3.height, o = _e3.aspectRatio;
-      }
-
-      a ? i || (i = Math.round(a / o)) : a = i ? Math.round(i * o) : 800;
-      var d = a;
-
-      if (t.width < a || t.height < i) {
-        var _r = t.width < a ? "width" : "height";
-
-        s.warn("\nThe requested " + _r + " \"" + ("width" === _r ? a : i) + "px\" for the image " + e + " was larger than the actual image " + _r + " of " + t[_r] + "px. If possible, replace the current image with a larger one."), "width" === _r ? (a = t.width, i = Math.round(a / o)) : a = (i = t.height) * o;
-      }
-
-      return {
-        sizes: l.filter(function (e) {
-          return e >= 1;
-        }).map(function (e) {
-          return Math.round(e * a);
-        }).filter(function (e) {
-          return e <= t.width;
-        }),
-        aspectRatio: o,
-        presentationWidth: d,
-        presentationHeight: Math.round(d / o),
-        unscaledWidth: a
-      };
-    }(e) : "constrained" === r ? S(e) : "fullWidth" === r ? S(u({
-      breakpoints: o
-    }, e)) : (s.warn("No valid layout was provided for the image at " + i + ". Valid image layouts are fixed, fullWidth, and constrained. Found " + r), {
-      sizes: [n.width],
-      presentationWidth: n.width,
-      presentationHeight: n.height,
-      aspectRatio: n.width / n.height,
-      unscaledWidth: n.width
-    });
-  }(u({}, e, {
-    sourceMetadata: a
-  })),
-      I = {
-    sources: []
-  };
-
-  var x = e.sizes;
-  x || (x = function (e, t) {
-    switch (t) {
-      case "constrained":
-        return "(min-width: " + e + "px) " + e + "px, 100vw";
-
-      case "fixed":
-        return e + "px";
-
-      case "fullWidth":
-        return "100vw";
-
-      default:
-        return;
-    }
-  }(M.presentationWidth, r)), E.forEach(function (e) {
-    var a = M.sizes.map(function (a) {
-      var r = i(d, a, Math.round(a / M.aspectRatio), e, n, s);
-      if (null != r && r.width && r.height && r.src && r.format) return r;
-      h.warn("[" + t + "] The resolver for image " + d + " returned an invalid value.");
-    }).filter(Boolean);
-
-    if ("jpg" === e || "png" === e || "auto" === e) {
-      var _e4 = a.find(function (e) {
-        return e.width === M.unscaledWidth;
-      }) || a[0];
-
-      _e4 && (I.fallback = {
-        src: _e4.src,
-        srcSet: y(a),
-        sizes: x
-      });
-    } else {
-      var r;
-      null == (r = I.sources) || r.push({
-        srcSet: y(a),
-        sizes: x,
-        type: "image/" + e
-      });
-    }
-  });
-  var N = {
-    images: I,
-    layout: r,
-    backgroundColor: c
-  };
-
-  switch (m && (N.placeholder = {
-    fallback: m
-  }), r) {
-    case "fixed":
-      N.width = M.presentationWidth, N.height = M.presentationHeight;
-      break;
-
-    case "fullWidth":
-      N.width = 1, N.height = 1 / M.aspectRatio;
-      break;
-
-    case "constrained":
-      N.width = e.width || M.presentationWidth || 1, N.height = (N.width || 1) / M.aspectRatio;
-  }
-
-  return N;
-}
-
-_c2 = M;
-
-var k = function k(e) {
-  return Array.from(new Set([1].concat((0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(e)))).sort(w);
-};
-
-function S(_ref3) {
-  var e = _ref3.sourceMetadata,
-      t = _ref3.width,
-      a = _ref3.height,
-      _ref3$fit = _ref3.fit,
-      i = _ref3$fit === void 0 ? "cover" : _ref3$fit,
-      _ref3$outputPixelDens = _ref3.outputPixelDensities,
-      r = _ref3$outputPixelDens === void 0 ? g : _ref3$outputPixelDens,
-      n = _ref3.breakpoints,
-      s = _ref3.layout;
-  var o,
-      l = e.width / e.height;
-  var d = k(r);
-
-  if (t && a) {
-    var _r2 = $(e, {
-      width: t,
-      height: a,
-      fit: i
-    });
-
-    t = _r2.width, a = _r2.height, l = _r2.aspectRatio;
-  }
-
-  t = t && Math.min(t, e.width), a = a && Math.min(a, e.height), t || a || (a = (t = Math.min(800, e.width)) / l), t || (t = a * l);
-  var h = t;
-  return (e.width < t || e.height < a) && (t = e.width, a = e.height), t = Math.round(t), (null == n ? void 0 : n.length) > 0 ? (o = n.filter(function (t) {
-    return t <= e.width;
-  }), o.length < n.length && !o.includes(e.width) && o.push(e.width)) : (o = d.map(function (e) {
-    return Math.round(e * t);
-  }), o = o.filter(function (t) {
-    return t <= e.width;
-  })), "constrained" !== s || o.includes(t) || o.push(t), o = o.sort(w), {
-    sizes: o,
-    aspectRatio: l,
-    presentationWidth: h,
-    presentationHeight: Math.round(h / l),
-    unscaledWidth: t
-  };
-}
-
-_c3 = S;
-
-function $(e, t) {
-  var a = e.width / e.height;
-  var i = t.width,
-      r = t.height;
-
-  switch (t.fit) {
-    case "fill":
-      i = t.width ? t.width : e.width, r = t.height ? t.height : e.height;
-      break;
-
-    case "inside":
-      {
-        var _e5 = t.width ? t.width : Number.MAX_SAFE_INTEGER,
-            _n = t.height ? t.height : Number.MAX_SAFE_INTEGER;
-
-        i = Math.min(_e5, Math.round(_n * a)), r = Math.min(_n, Math.round(_e5 / a));
-        break;
-      }
-
-    case "outside":
-      {
-        var _e6 = t.width ? t.width : 0,
-            _n2 = t.height ? t.height : 0;
-
-        i = Math.max(_e6, Math.round(_n2 * a)), r = Math.max(_n2, Math.round(_e6 / a));
-        break;
-      }
-
-    default:
-      t.width && !t.height && (i = t.width, r = Math.round(t.width / a)), t.height && !t.width && (i = Math.round(t.height * a), r = t.height);
-  }
-
-  return {
-    width: i,
-    height: r,
-    aspectRatio: i / r
-  };
-}
-
-var I = ["baseUrl", "urlBuilder", "sourceWidth", "sourceHeight", "pluginName", "formats", "breakpoints", "options"],
-    x = ["images", "placeholder"],
-    N = function N() {
-  return "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
-};
-
-function L() {
-  return  true && true;
-}
-
-_c4 = L;
-
-var W = function W(e) {
-  var t;
-  return function (e) {
-    var t, a;
-    return Boolean(null == e || null == (t = e.images) || null == (a = t.fallback) ? void 0 : a.src);
-  }(e) ? e : function (e) {
-    return Boolean(null == e ? void 0 : e.gatsbyImageData);
-  }(e) ? e.gatsbyImageData : function (e) {
-    return Boolean(null == e ? void 0 : e.gatsbyImage);
-  }(e) ? e.gatsbyImage : null == e || null == (t = e.childImageSharp) ? void 0 : t.gatsbyImageData;
-},
-    T = function T(e) {
-  var t, a, i;
-  return null == (t = W(e)) || null == (a = t.images) || null == (i = a.fallback) ? void 0 : i.src;
-},
-    R = function R(e) {
-  var t, a, i;
-  return null == (t = W(e)) || null == (a = t.images) || null == (i = a.fallback) ? void 0 : i.srcSet;
-};
-
-function _(e) {
-  var t;
-  var a = e.baseUrl,
-      i = e.urlBuilder,
-      r = e.sourceWidth,
-      n = e.sourceHeight,
-      _e$pluginName = e.pluginName,
-      s = _e$pluginName === void 0 ? "getImageData" : _e$pluginName,
-      _e$formats2 = e.formats,
-      o = _e$formats2 === void 0 ? ["auto"] : _e$formats2,
-      l = e.breakpoints,
-      d = e.options,
-      h = c(e, I);
-  return null != (t = l) && t.length || "fullWidth" !== h.layout && "FULL_WIDTH" !== h.layout || (l = m), M(u({}, h, {
-    pluginName: s,
-    generateImageSource: function generateImageSource(e, t, a, r) {
-      return {
-        width: t,
-        height: a,
-        format: r,
-        src: i({
-          baseUrl: e,
-          width: t,
-          height: a,
-          options: d,
-          format: r
-        })
-      };
-    },
-    filename: a,
-    formats: o,
-    breakpoints: l,
-    sourceMetadata: {
-      width: r,
-      height: n,
-      format: "auto"
-    }
-  }));
-}
-
-function j(e, t, a, i, r) {
-  if (r === void 0) {
-    r = {};
-  }
-
-  return L() || (r = u({
-    height: "100%",
-    left: 0,
-    position: "absolute",
-    top: 0,
-    transform: "translateZ(0)",
-    transition: "opacity 250ms linear",
-    width: "100%",
-    willChange: "opacity"
-  }, r)), u({}, a, {
-    loading: i,
-    shouldLoad: e,
-    "data-main-image": "",
-    style: u({}, r, {
-      opacity: t ? 1 : 0
-    })
-  });
-}
-
-function O(e, t, a, i, r, n, s, o) {
-  var l = {};
-  n && (l.backgroundColor = n, "fixed" === a ? (l.width = i, l.height = r, l.backgroundColor = n, l.position = "relative") : ("constrained" === a || "fullWidth" === a) && (l.position = "absolute", l.top = 0, l.left = 0, l.bottom = 0, l.right = 0)), s && (l.objectFit = s), o && (l.objectPosition = o);
-  var d = u({}, e, {
-    "aria-hidden": !0,
-    "data-placeholder-image": "",
-    style: u({
-      opacity: t ? 0 : 1,
-      transition: "opacity 500ms linear"
-    }, l)
-  });
-  return L() || (d.style = {
-    height: "100%",
-    left: 0,
-    position: "absolute",
-    top: 0,
-    width: "100%"
-  }), d;
-}
-
-_c5 = O;
-
-function C(e, t) {
-  var _r$images$sources2, _n$sources;
-
-  var a = e.images,
-      i = e.placeholder,
-      r = u({}, c(e, x), {
-    images: u({}, a, {
-      sources: []
-    }),
-    placeholder: i && u({}, i, {
-      sources: []
-    })
-  });
-  var n;
-  return t.forEach(function (_ref4) {
-    var _r$images$sources;
-
-    var t = _ref4.media,
-        a = _ref4.image;
-    t ? (a.layout !== e.layout && "development" === "development" && console.warn("[gatsby-plugin-image] Mismatched image layout: expected \"" + e.layout + "\" but received \"" + a.layout + "\". All art-directed images use the same layout as the default image"), (_r$images$sources = r.images.sources).push.apply(_r$images$sources, (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(a.images.sources.map(function (e) {
-      return u({}, e, {
-        media: t
-      });
-    })).concat([{
-      media: t,
-      srcSet: a.images.fallback.srcSet
-    }])), r.placeholder && r.placeholder.sources.push({
-      media: t,
-      srcSet: a.placeholder.fallback
-    })) :  true && console.warn("[gatsby-plugin-image] All art-directed images passed to must have a value set for `media`. Skipping.");
-  }), (_r$images$sources2 = r.images.sources).push.apply(_r$images$sources2, (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(a.sources)), null != i && i.sources && (null == (n = r.placeholder) || (_n$sources = n.sources).push.apply(_n$sources, (0,_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(i.sources))), r;
-}
-
-_c6 = C;
-
-var z = ["children"],
-    D = function D(_ref5) {
-  var t = _ref5.layout,
-      a = _ref5.width,
-      i = _ref5.height;
-  return "fullWidth" === t ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    "aria-hidden": !0,
-    style: {
-      paddingTop: i / a * 100 + "%"
-    }
-  }) : "constrained" === t ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    style: {
-      maxWidth: a,
-      display: "block"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("img", {
-    alt: "",
-    role: "presentation",
-    "aria-hidden": "true",
-    src: "data:image/svg+xml;charset=utf-8,%3Csvg height='" + i + "' width='" + a + "' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E",
-    style: {
-      maxWidth: "100%",
-      display: "block",
-      position: "static"
-    }
-  })) : null;
-},
-    A = function A(a) {
-  var i = a.children,
-      r = c(a, z);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(D, u({}, r)), i, null);
-},
-    q = ["src", "srcSet", "loading", "alt", "shouldLoad"],
-    P = ["fallback", "sources", "shouldLoad"],
-    H = function H(t) {
-  var a = t.src,
-      i = t.srcSet,
-      r = t.loading,
-      _t$alt = t.alt,
-      n = _t$alt === void 0 ? "" : _t$alt,
-      s = t.shouldLoad,
-      o = c(t, q);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("img", u({}, o, {
-    decoding: "async",
-    loading: r,
-    src: s ? a : void 0,
-    "data-src": s ? void 0 : a,
-    srcSet: s ? i : void 0,
-    "data-srcset": s ? void 0 : i,
-    alt: n
-  }));
-},
-    G = function G(t) {
-  var a = t.fallback,
-      _t$sources = t.sources,
-      i = _t$sources === void 0 ? [] : _t$sources,
-      _t$shouldLoad = t.shouldLoad,
-      r = _t$shouldLoad === void 0 ? !0 : _t$shouldLoad,
-      n = c(t, P);
-  var s = n.sizes || (null == a ? void 0 : a.sizes),
-      o = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(H, u({}, n, a, {
-    sizes: s,
-    shouldLoad: r
-  }));
-  return i.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("picture", null, i.map(function (_ref6) {
-    var t = _ref6.media,
-        a = _ref6.srcSet,
-        i = _ref6.type;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("source", {
-      key: t + "-" + i + "-" + a,
-      type: i,
-      media: t,
-      srcSet: r ? a : void 0,
-      "data-srcset": r ? void 0 : a,
-      sizes: s
-    });
-  }), o) : o;
-};
-
-var V;
-H.propTypes = {
-  src: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired,
-  alt: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired,
-  sizes: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-  srcSet: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-  shouldLoad: prop_types__WEBPACK_IMPORTED_MODULE_3__.bool
-}, G.displayName = "Picture", G.propTypes = {
-  alt: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired,
-  shouldLoad: prop_types__WEBPACK_IMPORTED_MODULE_3__.bool,
-  fallback: prop_types__WEBPACK_IMPORTED_MODULE_3__.exact({
-    src: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired,
-    srcSet: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-    sizes: prop_types__WEBPACK_IMPORTED_MODULE_3__.string
-  }),
-  sources: prop_types__WEBPACK_IMPORTED_MODULE_3__.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3__.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3__.exact({
-    media: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired,
-    type: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-    sizes: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-    srcSet: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired
-  }), prop_types__WEBPACK_IMPORTED_MODULE_3__.exact({
-    media: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-    type: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired,
-    sizes: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-    srcSet: prop_types__WEBPACK_IMPORTED_MODULE_3__.string.isRequired
-  })]))
-};
-
-var B = ["fallback"],
-    F = function F(t) {
-  var a = t.fallback,
-      i = c(t, B);
-  return a ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(G, u({}, i, {
-    fallback: {
-      src: a
-    },
-    "aria-hidden": !0,
-    alt: ""
-  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", u({}, i));
-};
-
-F.displayName = "Placeholder", F.propTypes = {
-  fallback: prop_types__WEBPACK_IMPORTED_MODULE_3__.string,
-  sources: null == (V = G.propTypes) ? void 0 : V.sources,
-  alt: function alt(e, t, a) {
-    return e[t] ? new Error("Invalid prop `" + t + "` supplied to `" + a + "`. Validation failed.") : null;
-  }
-};
-
-var U = function U(t) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(G, u({}, t)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("noscript", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(G, u({}, t, {
-    shouldLoad: !0
-  }))));
-};
-
-_c7 = U;
-U.displayName = "MainImage", U.propTypes = G.propTypes;
-
-var Y = function Y(e, t, a) {
-  for (var _len = arguments.length, i = new Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {
-    i[_key - 3] = arguments[_key];
-  }
-
-  return e.alt || "" === e.alt ? prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.apply((prop_types__WEBPACK_IMPORTED_MODULE_3___default()), [e, t, a].concat(i)) : new Error("The \"alt\" prop is required in " + a + ". If the image is purely presentational then pass an empty string: e.g. alt=\"\". Learn more: https://a11y-style-guide.com/style-guide/section-media.html");
-},
-    X = {
-  image: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object.isRequired),
-  alt: Y
-},
-    J = ["as", "image", "style", "backgroundColor", "className", "class", "onStartLoad", "onLoad", "onError"],
-    Z = ["style", "className"],
-    K = new Set();
-
-var Q, ee;
-
-var te = function te(e) {
-  var _e$as = e.as,
-      t = _e$as === void 0 ? "div" : _e$as,
-      a = e.image,
-      l = e.style,
-      d = e.backgroundColor,
-      h = e.className,
-      g = e.class,
-      p = e.onStartLoad,
-      m = e.onLoad,
-      f = e.onError,
-      w = c(e, J);
-
-  var y = a.width,
-      b = a.height,
-      v = a.layout,
-      E = function (e, t, a) {
-    var i = {};
-    var r = "gatsby-image-wrapper";
-    return L() || (i.position = "relative", i.overflow = "hidden"), "fixed" === a ? (i.width = e, i.height = t) : "constrained" === a && (L() || (i.display = "inline-block", i.verticalAlign = "top"), r = "gatsby-image-wrapper gatsby-image-wrapper-constrained"), {
-      className: r,
-      "data-gatsby-image-wrapper": "",
-      style: i
-    };
-  }(y, b, v),
-      M = E.style,
-      k = E.className,
-      S = c(E, Z),
-      $ = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(),
-      I = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(function () {
-    return JSON.stringify(a.images);
-  }, [a.images]);
-
-  g && (h = g);
-
-  var x = function (e, t, a) {
-    var i = "";
-    return "fullWidth" === e && (i = "<div aria-hidden=\"true\" style=\"padding-top: " + a / t * 100 + "%;\"></div>"), "constrained" === e && (i = "<div style=\"max-width: " + t + "px; display: block;\"><img alt=\"\" role=\"presentation\" aria-hidden=\"true\" src=\"data:image/svg+xml;charset=utf-8,%3Csvg height='" + a + "' width='" + t + "' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E\" style=\"max-width: 100%; display: block; position: static;\"></div>"), i;
-  }(v, y, b);
-
-  return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    Q || (Q = __webpack_require__.e(/*! import() */ "vendors-node_modules_gatsby-plugin-image_dist_lazy-hydrate-5dfb5ec5_js").then(__webpack_require__.bind(__webpack_require__, /*! ./lazy-hydrate-5dfb5ec5.js */ "./node_modules/gatsby-plugin-image/dist/lazy-hydrate-5dfb5ec5.js")).then(function (_ref7) {
-      var e = _ref7.renderImageToString,
-          t = _ref7.swapPlaceholderImage;
-      return ee = e, {
-        renderImageToString: e,
-        swapPlaceholderImage: t
-      };
-    }));
-    var e = $.current.querySelector("[data-gatsby-image-ssr]");
-    if (e && N()) return e.complete ? (null == p || p({
-      wasCached: !0
-    }), null == m || m({
-      wasCached: !0
-    }), setTimeout(function () {
-      e.removeAttribute("data-gatsby-image-ssr");
-    }, 0)) : (null == p || p({
-      wasCached: !0
-    }), e.addEventListener("load", function t() {
-      e.removeEventListener("load", t), null == m || m({
-        wasCached: !0
-      }), setTimeout(function () {
-        e.removeAttribute("data-gatsby-image-ssr");
-      }, 0);
-    })), void K.add(I);
-    if (ee && K.has(I)) return;
-    var t, i;
-    return Q.then(function (_ref8) {
-      var e = _ref8.renderImageToString,
-          r = _ref8.swapPlaceholderImage;
-      $.current && ($.current.innerHTML = e(u({
-        isLoading: !0,
-        isLoaded: K.has(I),
-        image: a
-      }, w)), K.has(I) || (t = requestAnimationFrame(function () {
-        $.current && (i = r($.current, I, K, l, p, m, f));
-      })));
-    }), function () {
-      t && cancelAnimationFrame(t), i && i();
-    };
-  }, [a]), (0,react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect)(function () {
-    K.has(I) && ee && ($.current.innerHTML = ee(u({
-      isLoading: K.has(I),
-      isLoaded: K.has(I),
-      image: a
-    }, w)), null == p || p({
-      wasCached: !0
-    }), null == m || m({
-      wasCached: !0
-    }));
-  }, [a]), /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(t, u({}, S, {
-    style: u({}, M, l, {
-      backgroundColor: d
-    }),
-    className: "" + k + (h ? " " + h : ""),
-    ref: $,
-    dangerouslySetInnerHTML: {
-      __html: x
-    },
-    suppressHydrationWarning: !0
-  }));
-},
-    ae = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.memo)(function (e) {
-  return e.image ? (L() || "development" !== "development" || console.warn('[gatsby-plugin-image] You\'re missing out on some cool performance features. Please add "gatsby-plugin-image" to your gatsby-config.js'), /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(te, e)) : ( true && console.warn("[gatsby-plugin-image] Missing image prop"), null);
-});
-
-ae.propTypes = X, ae.displayName = "GatsbyImage";
-
-var ie = ["src", "__imageData", "__error", "width", "height", "aspectRatio", "tracedSVGOptions", "placeholder", "formats", "quality", "transformOptions", "jpgOptions", "pngOptions", "webpOptions", "avifOptions", "blurredOptions", "breakpoints", "outputPixelDensities"],
-    re = function re(e, t) {
-  for (var _len2 = arguments.length, a = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-    a[_key2 - 2] = arguments[_key2];
-  }
-
-  return "fullWidth" !== e.layout || "width" !== t && "height" !== t || !e[t] ? prop_types__WEBPACK_IMPORTED_MODULE_3___default().number.apply((prop_types__WEBPACK_IMPORTED_MODULE_3___default()), [e, t].concat(a)) : new Error("\"" + t + "\" " + e[t] + " may not be passed when layout is fullWidth.");
-},
-    ne = new Set(["fixed", "fullWidth", "constrained"]),
-    se = {
-  src: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string.isRequired),
-  alt: Y,
-  width: re,
-  height: re,
-  sizes: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-  layout: function layout(e) {
-    if (void 0 !== e.layout && !ne.has(e.layout)) return new Error("Invalid value " + e.layout + "\" provided for prop \"layout\". Defaulting to \"constrained\". Valid values are \"fixed\", \"fullWidth\" or \"constrained\".");
-  }
-},
-    oe = function (t) {
-  return function (a) {
-    var i = a.src,
-        r = a.__imageData,
-        n = a.__error,
-        s = c(a, ie);
-    return n && console.warn(n), r ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(t, u({
-      image: r
-    }, s)) : (console.warn("Image not loaded", i), n || "development" !== "development" || console.warn('Please ensure that "gatsby-plugin-image" is included in the plugins array in gatsby-config.js, and that your version of gatsby is at least 2.24.78'), null);
-  };
-}(ae);
-
-oe.displayName = "StaticImage", oe.propTypes = se;
-
-
-var _c, _c2, _c3, _c4, _c5, _c6, _c7;
-
-__webpack_require__.$Refresh$.register(_c, "E");
-__webpack_require__.$Refresh$.register(_c2, "M");
-__webpack_require__.$Refresh$.register(_c3, "S");
-__webpack_require__.$Refresh$.register(_c4, "L");
-__webpack_require__.$Refresh$.register(_c5, "O");
-__webpack_require__.$Refresh$.register(_c6, "C");
-__webpack_require__.$Refresh$.register(_c7, "U");
-
-var $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-var $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		var errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		var testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-image/node_modules/camelcase/index.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-image/node_modules/camelcase/index.js ***!
-  \**************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/gatsby/dist/utils/fast-refresh-module.js */ "./node_modules/gatsby/dist/utils/fast-refresh-module.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-'use strict';
-
-var preserveCamelCase = function preserveCamelCase(string) {
-  var isLastCharLower = false;
-  var isLastCharUpper = false;
-  var isLastLastCharUpper = false;
-
-  for (var i = 0; i < string.length; i++) {
-    var character = string[i];
-
-    if (isLastCharLower && /[a-zA-Z]/.test(character) && character.toUpperCase() === character) {
-      string = string.slice(0, i) + '-' + string.slice(i);
-      isLastCharLower = false;
-      isLastLastCharUpper = isLastCharUpper;
-      isLastCharUpper = true;
-      i++;
-    } else if (isLastCharUpper && isLastLastCharUpper && /[a-zA-Z]/.test(character) && character.toLowerCase() === character) {
-      string = string.slice(0, i - 1) + '-' + string.slice(i - 1);
-      isLastLastCharUpper = isLastCharUpper;
-      isLastCharUpper = false;
-      isLastCharLower = true;
-    } else {
-      isLastCharLower = character.toLowerCase() === character && character.toUpperCase() !== character;
-      isLastLastCharUpper = isLastCharUpper;
-      isLastCharUpper = character.toUpperCase() === character && character.toLowerCase() !== character;
-    }
-  }
-
-  return string;
-};
-
-var camelCase = function camelCase(input, options) {
-  if (!(typeof input === 'string' || Array.isArray(input))) {
-    throw new TypeError('Expected the input to be `string | string[]`');
-  }
-
-  options = Object.assign({
-    pascalCase: false
-  }, options);
-
-  var postProcess = function postProcess(x) {
-    return options.pascalCase ? x.charAt(0).toUpperCase() + x.slice(1) : x;
-  };
-
-  if (Array.isArray(input)) {
-    input = input.map(function (x) {
-      return x.trim();
-    }).filter(function (x) {
-      return x.length;
-    }).join('-');
-  } else {
-    input = input.trim();
-  }
-
-  if (input.length === 0) {
-    return '';
-  }
-
-  if (input.length === 1) {
-    return options.pascalCase ? input.toUpperCase() : input.toLowerCase();
-  }
-
-  var hasUpperCase = input !== input.toLowerCase();
-
-  if (hasUpperCase) {
-    input = preserveCamelCase(input);
-  }
-
-  input = input.replace(/^[_.\- ]+/, '').toLowerCase().replace(/[_.\- ]+(\w|$)/g, function (_, p1) {
-    return p1.toUpperCase();
-  }).replace(/\d+(\w|$)/g, function (m) {
-    return m.toUpperCase();
-  });
-  return postProcess(input);
-};
-
-module.exports = camelCase; // TODO: Remove this for the next major release
-
-module.exports["default"] = camelCase;
-
-var $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-var $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		var errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		var testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
 /***/ "./node_modules/gatsby-plugin-netlify-cms/cms-identity.js":
 /*!****************************************************************!*\
   !*** ./node_modules/gatsby-plugin-netlify-cms/cms-identity.js ***!
@@ -13024,233 +12001,6 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/components/BlogRoll.js":
-/*!************************************!*\
-  !*** ./src/components/BlogRoll.js ***!
-  \************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ BlogRoll; }
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PreviewCompatibleImage */ "./src/components/PreviewCompatibleImage.js");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/gatsby/dist/utils/fast-refresh-module.js */ "./node_modules/gatsby/dist/utils/fast-refresh-module.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-var _jsxFileName = "/Users/clairemanthey/design_blog/src/components/BlogRoll.js",
-    _this = undefined;
-
-
-
-
-
-
-var BlogRollTemplate = function BlogRollTemplate(props) {
-  var posts = props.data.allMarkdownRemark.edges;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "columns is-multiline",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 5
-    }
-  }, posts && posts.map(function (_ref) {
-    var _post$frontmatter;
-
-    var post = _ref.node;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "is-parent column is-6",
-      key: post.id,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15,
-        columnNumber: 11
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
-      className: "blog-list-item tile is-child box notification " + (post.frontmatter.featuredpost ? 'is-featured' : ''),
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16,
-        columnNumber: 13
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21,
-        columnNumber: 15
-      }
-    }, (post === null || post === void 0 ? void 0 : (_post$frontmatter = post.frontmatter) === null || _post$frontmatter === void 0 ? void 0 : _post$frontmatter.featuredimage) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "featured-thumbnail",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23,
-        columnNumber: 19
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      imageInfo: {
-        image: post.frontmatter.featuredimage,
-        alt: "featured image thumbnail for post " + post.frontmatter.title,
-        width: post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.width,
-        height: post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.height
-      },
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 21
-      }
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-      className: "post-meta",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38,
-        columnNumber: 17
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-      className: "title has-text-primary is-size-4",
-      to: post.fields.slug,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39,
-        columnNumber: 19
-      }
-    }, post.frontmatter.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45,
-        columnNumber: 19
-      }
-    }, " \u2022 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-      className: "subtitle is-size-5 is-block",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46,
-        columnNumber: 19
-      }
-    }, post.frontmatter.date))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51,
-        columnNumber: 15
-      }
-    }, post.excerpt, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53,
-        columnNumber: 17
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54,
-        columnNumber: 17
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-      className: "button",
-      to: post.fields.slug,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55,
-        columnNumber: 17
-      }
-    }, "Keep Reading \u2192"))));
-  }));
-};
-
-_c = BlogRollTemplate;
-BlogRoll.propTypes = {
-  data: prop_types__WEBPACK_IMPORTED_MODULE_3___default().shape({
-    allMarkdownRemark: prop_types__WEBPACK_IMPORTED_MODULE_3___default().shape({
-      edges: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().array)
-    })
-  })
-};
-function BlogRoll() {
-  var _this2 = this;
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.StaticQuery, {
-    query: "1324706516",
-    render: function render(data, count) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(BlogRollTemplate, {
-        data: data,
-        count: count,
-        __self: _this2,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 112,
-          columnNumber: 32
-        }
-      });
-    },
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77,
-      columnNumber: 5
-    }
-  });
-}
-_c2 = BlogRoll;
-
-var _c, _c2;
-
-__webpack_require__.$Refresh$.register(_c, "BlogRollTemplate");
-__webpack_require__.$Refresh$.register(_c2, "BlogRoll");
-
-var $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-var $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		var errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		var testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
 /***/ "./src/components/Content.js":
 /*!***********************************!*\
   !*** ./src/components/Content.js ***!
@@ -13389,205 +12139,145 @@ var Footer = function Footer() {
       lineNumber: 11,
       columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "content",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("article", {
+    className: "footer__article",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
-      columnNumber: 9
+      columnNumber: 6
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "content",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "footer__header",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 7
+    }
+  }, "See My Work"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "footer__list",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
       columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "container",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://clairemakeswebsites.github.io./",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 13
+    }
+  }, "Website")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
-      columnNumber: 11
+      columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    style: {
-      maxWidth: "100vw"
-    },
-    className: "columns",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://codepen.io/aglaea",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 13
+    }
+  }, "Codepen")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://github.com/clairemanthey",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
       columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "column is-4",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 15
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: "menu",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 17
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "menu-list",
+  }, "Github")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("article", {
+    className: "footer__article",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20,
-      columnNumber: 19
+      columnNumber: 6
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "footer__header",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 7
+    }
+  }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "footer__list",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 21
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/",
-    className: "navbar-item",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 23
-    }
-  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 21
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    className: "navbar-item",
-    to: "/about",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 23
-    }
-  }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 21
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    className: "navbar-item",
-    to: "/blog",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 23
-    }
-  }, "Latest Stories")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 21
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    className: "navbar-item",
-    to: "/contact",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 23
-    }
-  }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "column is-4 social",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 15
+      lineNumber: 23,
+      columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    title: "facebook",
-    href: "https://facebook.com",
+    href: "mailto:clairemakes@gmail.com",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 17
+      lineNumber: 23,
+      columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _img_social_facebook_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-    alt: "Facebook",
-    style: {
-      width: "1em",
-      height: "1em"
-    },
+  }, "email")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 19
+      lineNumber: 24,
+      columnNumber: 9
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    title: "twitter",
-    href: "https://twitter.com",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://www.linkedin.com/in/claire-manthey-4389a622/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 17
+      lineNumber: 24,
+      columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: "fas fa-lg",
-    src: _img_social_twitter_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
-    alt: "Twitter",
-    style: {
-      width: "1em",
-      height: "1em"
-    },
+  }, "LinkedIn")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 19
+      lineNumber: 25,
+      columnNumber: 9
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    title: "instagram",
-    href: "https://instagram.com",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://twitter.com/claire_makes",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 17
+      lineNumber: 25,
+      columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _img_social_instagram_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-    alt: "Instagram",
-    style: {
-      width: "1em",
-      height: "1em"
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 19
-    }
-  })))))));
+  }, "Twitter")))));
 };
 
 _c = Footer;
@@ -13823,131 +12513,6 @@ _c = TemplateWrapper;
 var _c;
 
 __webpack_require__.$Refresh$.register(_c, "TemplateWrapper");
-
-var $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-var $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		var errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		var testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/components/PreviewCompatibleImage.js":
-/*!**************************************************!*\
-  !*** ./src/components/PreviewCompatibleImage.js ***!
-  \**************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/index.browser-dc34ce8e.js");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/gatsby/dist/utils/fast-refresh-module.js */ "./node_modules/gatsby/dist/utils/fast-refresh-module.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-var _jsxFileName = "/Users/clairemanthey/design_blog/src/components/PreviewCompatibleImage.js",
-    _this = undefined;
-
-
-
-
-
-var PreviewCompatibleImage = function PreviewCompatibleImage(_ref) {
-  var imageInfo = _ref.imageInfo;
-  var imageStyle = {
-    borderRadius: "5px"
-  };
-  var _imageInfo$alt = imageInfo.alt,
-      alt = _imageInfo$alt === void 0 ? "" : _imageInfo$alt,
-      childImageSharp = imageInfo.childImageSharp,
-      image = imageInfo.image;
-
-  if (!!image && !!image.childImageSharp) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_1__.G, {
-      image: image.childImageSharp.gatsbyImageData,
-      style: imageStyle,
-      alt: alt,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12,
-        columnNumber: 7
-      }
-    });
-  } else if (!!childImageSharp) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_1__.G, {
-      image: childImageSharp.gatsbyImageData,
-      style: imageStyle,
-      alt: alt,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20,
-        columnNumber: 7
-      }
-    }); // for Netlify CMS 
-  } else if (image) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      style: {
-        imageStyle: imageStyle
-      },
-      src: image,
-      alt: alt,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 28,
-        columnNumber: 12
-      }
-    });
-  } else {
-    return null;
-  }
-};
-
-_c = PreviewCompatibleImage;
-PreviewCompatibleImage.propTypes = {
-  imageInfo: prop_types__WEBPACK_IMPORTED_MODULE_2___default().shape({
-    alt: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-    childImageSharp: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object),
-    image: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)]).isRequired,
-    style: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)
-  }).isRequired
-};
-/* harmony default export */ __webpack_exports__["default"] = (PreviewCompatibleImage);
-
-var _c;
-
-__webpack_require__.$Refresh$.register(_c, "PreviewCompatibleImage");
 
 var $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 var $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -14314,8 +12879,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
-/* harmony import */ var _components_BlogRoll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/BlogRoll */ "./src/components/BlogRoll.js");
+/* harmony import */ var _img_header_image_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/header_image.png */ "./src/img/header_image.png");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/gatsby/dist/utils/fast-refresh-module.js */ "./node_modules/gatsby/dist/utils/fast-refresh-module.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -14327,7 +12892,8 @@ var _jsxFileName = "/Users/clairemanthey/design_blog/src/templates/index-page.js
 
 
 
- // eslint-disable-next-line
+ //import BlogRoll from "../components/BlogRoll";
+// eslint-disable-next-line
 
 var IndexPageTemplate = function IndexPageTemplate(_ref) {
   var image = _ref.image,
@@ -14342,49 +12908,67 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 5
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
-    className: "main-section",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 11
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: _img_header_image_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+    alt: "Header Graphic",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22,
-      columnNumber: 13
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: "main-section",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "main-title",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 9
     }
   }, "Adventures in Web Design"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "para blog-para para-home",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
+      lineNumber: 25,
+      columnNumber: 9
     }
   }, "Welcome to my blog. Follow me along my journey to making the web a more beautiful place."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "para blog-para para-home",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 13
+      lineNumber: 26,
+      columnNumber: 9
     }
-  }, "Starting from the basics with HTML and working up to add functionality with JS and making it look good with CSS."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, "Starting from the basics with HTML and working up to add functionality with JS and making it lookgood with CSS."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/blog",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 13
+      lineNumber: 27,
+      columnNumber: 9
     }
-  }, "Go to Blog")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: "btn-blog center pointer",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 26
+    }
+  }, "Go to Blog"))));
 };
 _c = IndexPageTemplate;
 IndexPageTemplate.propTypes = {
@@ -14402,7 +12986,7 @@ IndexPageTemplate.propTypes = {
 var IndexPage = function IndexPage(_ref2) {
   var data = _ref2.data;
   var frontmatter = data.markdownRemark.frontmatter;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -45671,7 +44255,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1675913132233
+      // 1675979043330
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -68908,6 +67492,18 @@ function uploadcareTabEffects(container, button, dialogApi, settings, name) {
 
 /***/ }),
 
+/***/ "./src/img/header_image.png":
+/*!**********************************!*\
+  !*** ./src/img/header_image.png ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/header_image-b88067d7fa07f223e6a80f462dddc639.png");
+
+/***/ }),
+
 /***/ "./src/img/social/facebook.svg":
 /*!*************************************!*\
   !*** ./src/img/social/facebook.svg ***!
@@ -73977,36 +72573,6 @@ module.exports = [];
 /******/ 		};
 /******/ 	}();
 /******/ 	
-/******/ 	/* webpack/runtime/create fake namespace object */
-/******/ 	!function() {
-/******/ 		var getProto = Object.getPrototypeOf ? function(obj) { return Object.getPrototypeOf(obj); } : function(obj) { return obj.__proto__; };
-/******/ 		var leafPrototypes;
-/******/ 		// create a fake namespace object
-/******/ 		// mode & 1: value is a module id, require it
-/******/ 		// mode & 2: merge all properties of value into the ns
-/******/ 		// mode & 4: return value when already ns object
-/******/ 		// mode & 16: return value when it's Promise-like
-/******/ 		// mode & 8|1: behave like require
-/******/ 		__webpack_require__.t = function(value, mode) {
-/******/ 			if(mode & 1) value = this(value);
-/******/ 			if(mode & 8) return value;
-/******/ 			if(typeof value === 'object' && value) {
-/******/ 				if((mode & 4) && value.__esModule) return value;
-/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
-/******/ 			}
-/******/ 			var ns = Object.create(null);
-/******/ 			__webpack_require__.r(ns);
-/******/ 			var def = {};
-/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
-/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
-/******/ 				Object.getOwnPropertyNames(current).forEach(function(key) { def[key] = function() { return value[key]; }; });
-/******/ 			}
-/******/ 			def['default'] = function() { return value; };
-/******/ 			__webpack_require__.d(ns, def);
-/******/ 			return ns;
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -74016,28 +72582,6 @@ module.exports = [];
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/ensure chunk */
-/******/ 	!function() {
-/******/ 		__webpack_require__.f = {};
-/******/ 		// This file contains only the entry chunk.
-/******/ 		// The chunk loading function for additional chunks
-/******/ 		__webpack_require__.e = function(chunkId) {
-/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce(function(promises, key) {
-/******/ 				__webpack_require__.f[key](chunkId, promises);
-/******/ 				return promises;
-/******/ 			}, []));
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/get javascript chunk filename */
-/******/ 	!function() {
-/******/ 		// This function allow to reference async chunks
-/******/ 		__webpack_require__.u = function(chunkId) {
-/******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -74066,7 +72610,7 @@ module.exports = [];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "02cb3e22fed2f40c478c"; }
+/******/ 		__webpack_require__.h = function() { return "e2c2faf8187abf9a358b"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -74710,44 +73254,7 @@ module.exports = [];
 /******/ 			"cms": 0
 /******/ 		};
 /******/ 		
-/******/ 		__webpack_require__.f.j = function(chunkId, promises) {
-/******/ 				// JSONP chunk loading for javascript
-/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
-/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
-/******/ 		
-/******/ 					// a Promise means "currently loading".
-/******/ 					if(installedChunkData) {
-/******/ 						promises.push(installedChunkData[2]);
-/******/ 					} else {
-/******/ 						if(true) { // all chunks have JS
-/******/ 							// setup Promise in chunk cache
-/******/ 							var promise = new Promise(function(resolve, reject) { installedChunkData = installedChunks[chunkId] = [resolve, reject]; });
-/******/ 							promises.push(installedChunkData[2] = promise);
-/******/ 		
-/******/ 							// start chunk loading
-/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
-/******/ 							// create error before stack unwound to get useful stacktrace later
-/******/ 							var error = new Error();
-/******/ 							var loadingEnded = function(event) {
-/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
-/******/ 									installedChunkData = installedChunks[chunkId];
-/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
-/******/ 									if(installedChunkData) {
-/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 										var realSrc = event && event.target && event.target.src;
-/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 										error.name = 'ChunkLoadError';
-/******/ 										error.type = errorType;
-/******/ 										error.request = realSrc;
-/******/ 										installedChunkData[1](error);
-/******/ 									}
-/******/ 								}
-/******/ 							};
-/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
-/******/ 					}
-/******/ 				}
-/******/ 		};
+/******/ 		// no chunk on demand loading
 /******/ 		
 /******/ 		// no prefetching
 /******/ 		
@@ -75246,36 +73753,7 @@ module.exports = [];
 /******/ 		
 /******/ 		// no on chunks loaded
 /******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = function(parentChunkLoadingFunction, data) {
-/******/ 			var chunkIds = data[0];
-/******/ 			var moreModules = data[1];
-/******/ 			var runtime = data[2];
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some(function(id) { return installedChunks[id] !== 0; })) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 			}
-/******/ 		
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkgatsby_starter_netlify_cms"] = self["webpackChunkgatsby_starter_netlify_cms"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 		// no jsonp function
 /******/ 	}();
 /******/ 	
 /************************************************************************/

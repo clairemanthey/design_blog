@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import HeaderImage from "../img/header_image.png";
 
 import Layout from "../components/Layout";
-import BlogRoll from "../components/BlogRoll";
+//import BlogRoll from "../components/BlogRoll";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -18,14 +19,13 @@ export const IndexPageTemplate = ({
 
   return (
     <main className="main">
-          <section className="main-section">
-            <h1>Adventures in Web Design</h1>
-            <p className="para blog-para para-home">Welcome to my blog. Follow me along my journey to making the web a more beautiful place.</p>
-            <p className="para blog-para para-home">Starting from the basics with HTML and working up to add functionality with JS and making it look
-            good with CSS.</p>
-            <Link to="/blog">Go to Blog</Link>
-          </section>
-
+      <img src={HeaderImage} alt="Header Graphic" />
+      <section className="main-section">
+        <h1 className="main-title">Adventures in Web Design</h1>
+        <p className="para blog-para para-home">Welcome to my blog. Follow me along my journey to making the web a more beautiful place.</p>
+        <p className="para blog-para para-home">Starting from the basics with HTML and working up to add functionality with JS and making it lookgood with CSS.</p>
+        <Link to="/blog"><button className="btn-blog center pointer">Go to Blog</button></Link>
+      </section>
     </main>
   );
 };
