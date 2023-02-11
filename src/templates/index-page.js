@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import HeaderImage from "../img/header_image.png";
+import Navbar from "../components/Navbar"
 
 import Layout from "../components/Layout";
 //import BlogRoll from "../components/BlogRoll";
@@ -20,6 +21,7 @@ export const IndexPageTemplate = ({
   return (
     <main className="main">
       <img src={HeaderImage} alt="Header Graphic" />
+      <Navbar />
       <section className="main-section">
         <h1 className="main-title">Adventures in Web Design</h1>
         <p className="para blog-para para-home">Welcome to my blog. Follow me along my journey to making the web a more beautiful place.</p>

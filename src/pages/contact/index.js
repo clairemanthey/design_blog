@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-solid-svg-icons'
 import HeaderImage from "../../img/header_image.png";
+import Navbar from "../../components/Navbar"
 
 export default class Index extends React.Component {
   render() {
@@ -19,7 +20,9 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <img src={HeaderImage} alt="Header Graphic" />
-
+        <div className="contact-nav">
+          <Navbar />
+        </div>
         <main className="main_contact">
 
           <h1 className="contact_header lighter">Contact Me!</h1>

@@ -119,6 +119,17 @@ svg{
   border: 2px solid var(--background-color);
 }
 
+/*---Navbar Styles---*/
+.nav-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 15px 0 0 0;
+  font-size: var(--fs-500);
+  background: inherit;
+  color: inherit;
+}
+
 /*---Footer Styles---*/
 
 .footer{
@@ -157,6 +168,14 @@ svg{
 }
 
 /*---Contact Page---*/
+
+.contact-nav{
+  background: var(--background-footer);
+  color: var(--background-color);
+  margin: -25px 0 0 0;
+  padding: 25px 0 0 0;
+
+}
 .email-container{
   display: flex;
   flex-direction: row;
