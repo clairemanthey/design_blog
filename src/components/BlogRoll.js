@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
 const BlogRollTemplate = (props) => {
@@ -12,43 +11,26 @@ const BlogRollTemplate = (props) => {
     <div className="columns is-multiline">
       {posts &&
         posts.map(({ node: post }) => (
-          <div className="is-parent column is-6" key={post.id}>
+          <div className="post-container" key={post.id}>
             <article
               className={`blog-list-item tile is-child box notification ${
                 post.frontmatter.featuredpost ? 'is-featured' : ''
               }`}
             >
               <header>
-                {post?.frontmatter?.featuredimage && (
-                  <div className="featured-thumbnail">
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        width:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.width,
-                        height:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.height,
-                      }}
-                    />
-                  </div>
-                ) }
                 <p className="post-meta">
                   <Link
-                    className="title has-text-primary is-size-4"
+                    className="post-title"
                     to={post.fields.slug}
                   >
                     {post.frontmatter.title}
                   </Link>
-                  <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
+                  <span className="post-subtitle">
                     {post.frontmatter.date}
                   </span>
                 </p>
               </header>
-              <p>
+              <p className="blog-excerpt">
                 {post.excerpt}
                 <br />
                 <br />

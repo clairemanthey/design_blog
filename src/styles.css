@@ -233,3 +233,53 @@ svg{
 .work-link{
   padding: 15px 10px;
 }
+
+/*---BlogRoll Page Styles---*/
+
+.blog-roll-main{
+  background: var(--background-color);
+  color: var(--font-color);
+}
+
+.blog-roll-section{ 
+}
+
+.blog-roll-title{
+  font-size: var(--fs-900);
+  font-weight: lighter;
+  margin: 2.5rem 0 0 0;
+}
+
+/*--BlogRoll compoenent styles--*/
+.post-container{
+  padding: 4rem 10rem;
+
+}
+
+.post-meta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post-title{
+  font-size: var(--fs-700);
+
+}
+.blog-excerpt{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
