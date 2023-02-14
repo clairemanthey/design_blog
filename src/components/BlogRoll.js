@@ -17,7 +17,7 @@ const BlogRollTemplate = (props) => {
                 post.frontmatter.featuredpost ? 'is-featured' : ''
               }`}
             >
-              <header>
+              <header className="blog-roll-header">
                 <p className="post-meta">
                   <Link
                     className="post-title"
