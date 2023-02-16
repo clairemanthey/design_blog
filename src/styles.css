@@ -239,6 +239,8 @@ svg{
 .blog-roll-main{
   background: var(--background-color);
   color: var(--font-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-roll-section{ 
@@ -280,6 +282,12 @@ svg{
 }
 
 /*---Blog Post---*/
+
+.blog-post-main{
+  display: flex;
+  flex-direction: column;
+}
+
 .individual-section{
   background: var(--background-color);
   color: var(--font-color);
@@ -339,22 +347,77 @@ svg{
   padding: 0 3rem;
 }
 
+/*--All Tag Page---*/
+
+.all-tag-main{
+  background: var(--background-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.all-tags-container{
+  padding: 2rem 0 0 0;
+  min-height: 575px;
+}
+
+.all-tags-title{
+  font-size: var(--fs-700);
+  font-weight: lighter;
+}
+
+.all-taglist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2rem 0 0 0;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
 
 
+.all-tags-tag{
+  padding: 15px 45px;
+  font-size: var(--fs-500);
 
+}
 
+/*---Individual Tag---*/
+.individual-tag-main{
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
+  color: var(--font-color);
+  min-height: 800px;
+}
 
+.individual-tag-section{
+  padding: 0 0 300px 0;
 
+}
+.individual-tag{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.individual-tag-title{
+  font-weight: lighter;
+  font-size: var(--fs-700);
+  padding: 0 0 45px 0;
+}
 
+.individual-tag{
+  font-size: var(--fs-400);
+}
 
-
-
-
-
-
-
-
+.see-all{
+  font-weight: bold;
+  font-size: var(--fs-400);
+  padding: 25px 0 45px 20px;
+}
 
 
 

@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <main>
+    <main class="blog-post-main">
       <img src={HeaderImage} alt="Header Graphic" />
 
       <section className="individual-section">

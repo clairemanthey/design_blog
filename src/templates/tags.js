@@ -2,6 +2,8 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import HeaderImage from "../img/header_image.png";
+
 
 const TagRoute = (props) =>  {
 
@@ -24,23 +26,21 @@ const TagRoute = (props) =>  {
 
     return (
       <Layout>
-        <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: "6rem" }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <main className="individual-tag-main">
+          <img src={HeaderImage} alt="Header Graphic" className="header-graphic" />
+          <p className="see-all">
+            <Link to="/tags/">See all tags</Link>
+          </p>    
+          
+          <section className="individual-tag-section">
+            <Helmet title={`${tag} | ${title}`} />
+            
+            <article className="individual-tag">
+              <h3 className="individual-tag-title">{tagHeader}</h3>
+              <ul className="individual-tag">{postLinks}</ul>
+            </article>
+          </section>
+        </main>
       </Layout>
     );
 }
