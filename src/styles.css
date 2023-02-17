@@ -419,6 +419,42 @@ svg{
   padding: 25px 0 45px 20px;
 }
 
+/*---404 Page--*/
+
+.main-404{
+  background: var(--background-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 850px;
+}
+
+.section-404{
+  padding: 2.5rem 0 0 0;
+}
+
+.title-404{
+  font-weight: lighter;
+  font-size: var(--fs-900);
+}
+.subtitle-404{
+  font-weight: lighter;
+  font-size: var(--fs-700);
+  padding: 2.5rem 0 0 0;
+}
+.link-container-404{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2.5rem 0;
+}
+.link-404{
+  font-size: var(--fs-600);
+}
+
+
 
 
 
