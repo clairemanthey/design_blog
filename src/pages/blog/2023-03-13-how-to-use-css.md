@@ -9,8 +9,6 @@ tags:
 ---
 CSS uses selectors and property-value pairs to add styling to HTML pages. A selector selects which HTML element will have which styles. The property-value defines the property and the value of that style. In CSS when p is the selector, color is the property, and white is the value, it will look like this
 
-﻿
-
 ```
 p{
   color: white;
@@ -84,10 +82,12 @@ Any attribute can be used to apply styles to an element with the name of the att
 
 Properties are the styling added to an element. There are a variety of properties and even more values. CSS properties are used for adding styles such as font size, color, and font weight as well altering the position of an element. Certain properties can only apply to certain elements such a font-size and font-weight will only apply to elements that have text. 
 
+[M﻿DN Selector Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) [](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
+[CSS Property Reference ](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
 
-[M﻿DN Selector Reference](<https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors>) [](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+[M﻿DN CSS Property Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)
 
-[CSS Property Reference ](<https://www.tutorialrepublic.com/css-reference/css3-properties.php>)
+[](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
 
-[M﻿DN CSS Property Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)[](https://www.tutorialrepublic.com/css-reference/css3-properties.php)
+Next: How to Name Classes and Ids in CSS?
