@@ -8,11 +8,11 @@ A blog built using Gatsby
 
 [Motivation](#Motivation)
 
-[Built with](#Built with)
+[Built with](#Built-with)
 
-[See the Live Site](#See The Live Site)
+[See the Live Site](#See-The-Live-Site)
 
-[How to Get Started with Gatsby](#How to Get Started with Gatsby)
+[How to Get Started with Gatsby](#How-to-Get-Started-with-Gatsby)
 
 [Acknowledgements](#Acknowledgements)
 
