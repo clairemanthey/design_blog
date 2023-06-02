@@ -4,17 +4,19 @@ A blog built using Gatsby
 
 ## Table of Contents
 
-Introduction
+Introduction(#Introduction)
 
-Technologies Used
+Motivation(#Motivation)
 
-See the Live Site
+Built with(#Built with)
 
-How to Get Started with Gatsby
+See the Live Site(#See The Live Site)
 
-License
+How to Get Started with Gatsby(#How to Get Started with Gatsby)
 
-Acknowledgements
+Acknowledgements(#Acknowledgements)
+
+License(#License)
 
 ## Introduction
 Welcome to the repo for my blog about learning web design. It covers concepts starting with HTML, then adding CSS and JS tracing my journey learning and using those concepts to create websites and web applications. 
